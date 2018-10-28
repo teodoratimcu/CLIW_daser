@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1080">
+    <meta name="description" content="An online SQL database playground for testing, debugging and sharing SQL snippets." />
+    <title>Daser - SQL Database Playground</title>
+    <link rel="stylesheet" href="C:\Users\Teodora Timcu\Desktop\proiect\mystyle.css">
+    <link rel="icon" type="image/png" href="database.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="lib/codemirror.js"></script>
+    <link rel="stylesheet" href="lib/codemirror.css">
+    <script src="mode/javascript/javascript.js"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a class="active" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="#">File</a>
+        <a href="#">Export</a>
+        <a href="#">Save</a>
+        <a href="#"> Blog</a>
+        <a href="#" class="right">About</a>
+        <a href="contact.html" class="right"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+        <a href="#" class="right"><i class="fa fa-fw fa-user"></i> Login</a>
+    </div>
+
+    <form action="#" id="login-form">
+        <div class="head">Contact form</div>
+
+        <div class="input-field">
+            <label for="fname">First Name</label>
+            <input type="fname" name="fname" placeholder="Your name..">
+            <label for="lname">Last Name</label>
+            <input type="lname" name="lname" placeholder="Your last name..">
+            <label for="country">Country</label>
+            <select type="country" name="country">
+                <option value="australia">Romania</option>
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+            </select>
+            <label for="subject">Subject</label>
+            <textarea type="subject" id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+            <input type="submit" value="Login" />
+        </div>
+    </form>
+</body>
