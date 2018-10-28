@@ -14,24 +14,39 @@
 <body>
   <div class="navbar">
     <img src="./database.png" alt="logo" />
-    <a class="active" href="#">Home</a>
-    <a href="#">File</a>
+    <a class="active" href="index.html">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">File</button>
+      <div class="dropdown-content">
+        <a href="#">New file</a>
+        <a href="#">Save</a>
+        <a href="#">Clear</a>
+        <a href="#">Load sample diagram</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Insert</button>
+      <div class="dropdown-content">
+        <a href="#">Table</a>
+        <a href="#">Relation</a>
+        <a href="#">Note</a>
+      </div>
+    </div>
     <div class="dropdown">
       <button class="dropbtn">Export</button>
       <div class="dropdown-content">
+        <a href="#">SQL file</a>
         <a href="#">PNG image</a>
         <a href="#">SVG file</a>
       </div>
     </div>
-    <a href="#">Import</a>
-    <a href="#">Save</a>
+    <a href="import.html">Import</a>
     <a href="#"> Blog</a>
-    <a href="#" class="right">About</a>
+    <a href="about.html" class="right">About</a>
     <a href="contact.html" class="right"><i class="fa fa-fw fa-envelope"></i> Contact</a>
     <a href="login.html" class="right"><i class="fa fa-fw fa-user"></i> Login</a>
   </div>
-
-  <form action="#" id="login-form">
+  <form action="#" id="form">
     <div class="head">Login</div>
     <div class="social">
       <h4>Connect with</h4>

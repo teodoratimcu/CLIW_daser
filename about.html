@@ -9,23 +9,38 @@
   <link rel="stylesheet" href="./mystyle.css">
   <link rel="icon" type="image/png" href="./teo.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
   <div class="navbar">
     <img src="./database.png" alt="logo" />
-    <a class="active" href="#">Home</a>
-    <a href="#">File</a>
+    <a class="active" href="index.html">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn">File</button>
+      <div class="dropdown-content">
+        <a href="#">New file</a>
+        <a href="#">Save</a>
+        <a href="#">Clear</a>
+        <a href="#">Load sample diagram</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Insert</button>
+      <div class="dropdown-content">
+        <a href="#">Table</a>
+        <a href="#">Relation</a>
+        <a href="#">Note</a>
+      </div>
+    </div>
     <div class="dropdown">
       <button class="dropbtn">Export</button>
       <div class="dropdown-content">
+        <a href="#">SQL file</a>
         <a href="#">PNG image</a>
         <a href="#">SVG file</a>
       </div>
     </div>
-    <a href="#">Import</a>
-    <a href="#">Save</a>
+    <a href="import.html">Import</a>
     <a href="#"> Blog</a>
     <a href="about.html" class="right">About</a>
     <a href="contact.html" class="right"><i class="fa fa-fw fa-envelope"></i> Contact</a>
@@ -34,7 +49,7 @@
 
   <div class="daser">
       <div class="daser-image-wrapper">
-          <img class="daser-image" src="./db.jpg" alt="database" />
+          <img class="daser-image" src="./teo.png" alt="database" />
       </div>
       <h1 class="daser-title">DASER</h1>
       <p class="daser-subtitle">SQL Database Playground</p>

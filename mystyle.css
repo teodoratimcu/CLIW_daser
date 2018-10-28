@@ -6,8 +6,9 @@ body {
   margin:0;
 }
 
-
-
+body.home {
+  background-image: url("grid.png");
+}
 
 .navbar {
   width: 100%;
@@ -118,8 +119,6 @@ table {
   font-size: 15px;
 }
 
-
-
 .content {
   padding: 0 18px;
   display: none;
@@ -127,7 +126,8 @@ table {
 }
 
 /* FORMS */
-form#login-form {
+
+form#form {
   background: #fff;
   border-radius: 6px;
   box-shadow: 0 0 3px #000;
@@ -225,7 +225,7 @@ form#login-form {
   font-size: 14px;
   margin-top: 5px;
 }
-.input-field input[type="email"], .input-field input[type="password"] {
+.input-field input[type="email"], .input-field input[type="password"], .input-field input[type="fname"], .input-field input[type="lname"], .input-field select, .input-field textarea{
   border: 1px solid #dfdfdf;
   border-radius: 4px;
   box-shadow: 0 0 4px rgba(223, 223, 223, 0.2);
@@ -266,11 +266,13 @@ form#login-form {
   color: #175690;
 }
 @media (max-width: 480px){
-  form#login-form {
+  form#form {
     width: 90%;
     margin: 30px auto;
   }
 }
+  
+/* about-page */
 
 .daser-image {
   width: 200px;
