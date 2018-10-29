@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin:0;
@@ -26,7 +27,7 @@ body.home {
   font-size: 17px;
 }
 
-.navbar a.right {
+.navbar-right {
   float: right;
 }
 
@@ -34,23 +35,13 @@ body.home {
   background-color: grey;
 }
 
-
-
-@media screen and (max-width: 500px) {
-  .navbar a {
-    float: none;
-    display: block;
-  }
-}
-
-
-  img {
+img {
     float: left;
     padding:5px;
   }
 
 
-  .dropdown {
+.dropdown {
     float: left;
     overflow: hidden;
 }
@@ -65,8 +56,6 @@ body.home {
     font-size:17px;
     padding:12px;
 }
-
-
 
 .dropdown-content {
     display: none;
@@ -280,57 +269,30 @@ form#form {
 }
 
 /* import-page */
-
-.build-schema {
-  float:left;
-  margin:20px;
-}
-
-.build-schema input[type="submit"]{
+.row input[type="submit"]{
   background: #f85f64;
   border: medium none;
   border-radius: 4px;
   color: #fff;
   cursor: pointer;
-  margin-top: 10px;;
-  outline: medium none;
-  overflow: hidden;
-  padding: 14px;
-}
-
-.build-schema input[type="submit"]:hover {
-  background: #fe7175;
-}
-
-.build-schema textarea {
-  background-color: lightgray;
-}
-
-.run-sql{
-  float:right;
-  margin:20px;
-}
-
-.run-sql textarea {
-  background-color: whitesmoke;
-}
-
-.run-sql input[type="submit"]{
-  background:#49afcd;
-  border: medium none;
-  border-radius: 4px;
-  color: #fff;
-  cursor: pointer;
+  margin-left: 10px;;
   margin-top:10px;
   outline: medium none;
   overflow: hidden;
   padding: 14px;
 }
 
-.run-sql input[type="submit"]:hover {
-  background: lightblue;
+.row input[type="submit"]:hover {
+  background: #fe7175;
 }
 
+.row textarea[type="1"] {
+  background-color: lightgray;
+}
+
+.row textarea[type="2"] {
+  background-color: whitesmoke;
+}
 
 @media screen and (max-width: 500px) {
   .run-sql {
@@ -388,4 +350,37 @@ tbody {
   text-align: left;
 }
 
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+      width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .dropdown {
+    float: none;
+  }
+  .navbar a, .dropdown button {
+    float: none;
+    display: block;
+  }
+  .navbar-right {
+    float: none;
+  }
 }

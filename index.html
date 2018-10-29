@@ -9,14 +9,16 @@
   <link rel="stylesheet" href="./mystyle.css">
   <link rel="icon" type="image/png" href="./teo.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+    crossorigin="anonymous">
 </head>
 
 <body class="home">
   <div class="navbar">
     <img src="./database.png" alt="logo" />
-    <a class="active" href="index.html">Home</a>
+    <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
     <div class="dropdown">
-      <button class="dropbtn">File</button>
+      <button class="dropbtn"><i class="fa fa-fw fa-file"></i> File</button>
       <div class="dropdown-content">
         <a href="#">New file</a>
         <a href="#">Save</a>
@@ -25,7 +27,7 @@
       </div>
     </div>
     <div class="dropdown">
-      <button class="dropbtn">Insert</button>
+      <button class="dropbtn"><i class="fa fa-fw fa-plus"></i> Insert</button>
       <div class="dropdown-content">
         <a href="#">Table</a>
         <a href="#">Relation</a>
@@ -33,18 +35,22 @@
       </div>
     </div>
     <div class="dropdown">
-      <button class="dropbtn">Export</button>
+      <button class="dropbtn"><i class="fa fa-fw fa-images"></i> Export</button>
       <div class="dropdown-content">
         <a href="#">SQL file</a>
         <a href="#">PNG image</a>
         <a href="#">SVG file</a>
       </div>
     </div>
-    <a href="import.html">Import</a>
-    <a href="#"> Blog</a>
-    <a href="about.html" class="right">About</a>
-    <a href="contact.html" class="right"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-    <a href="login.html" class="right"><i class="fa fa-fw fa-user"></i> Login</a>
+    <a href="import.html"><i class="fa fa-fw fa-file-import"></i> Import</a>
+    <a href="http://students.info.uaic.ro/~teodora.timcu/"><i class="fa fa-fw fa-link"></i> Blog</a>
+    <div class="navbar-right">
+
+      <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+      <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+      <a href="about.html"><i class="fa fa-fw fa-star"></i> About</a>
+
+    </div>
   </div>
 
   <table id="mydiv" width="10%">
@@ -67,7 +73,7 @@
       </tr>
     </thead>
 
-    <tfoot class="add">
+    <tfoot>
       <tr>
         <td colspan="4"><button class="collapsible" style="background-color: #9494b8 ; padding:5px"><i class="fa fa-fw fa-plus"></i>
             Add field</button>
@@ -76,9 +82,9 @@
             <label for="text">Name</label>
             <input type="text" name="text">
             <br>
-            <label for="field-type" data-lang-text="designer.field_type">Type</label>
+            <label for="field-type"">Type</label>
             <br>
-            <select class="field-type" name="field-type">
+            <select class=" field-type" name="field-type">
               <option value="binary">binary</option>
               <option value="blob">blob</option>
               <option value="boolean">boolean</option>
@@ -92,40 +98,40 @@
               <option value="time">time</option>
               <option value="timestamp">timestamp</option>
               <option value="varchar">varchar</option>
-            </select>
-            <br>
-            <label for="field-size" data-lang-text="designer.field_size">Size</label>
-            <input type="text" name="field-size" class="field-size">
-            <br>
-            <label for="" data-lang-text="designer.field_default">Default</label>
-            <input type="text" name="field-default" class="field-default">
-            <br>
-            <label class="cb-label">
-              <input type="checkbox" name="field-pk" class="checkbox field-pk"><span data-lang-text="designer.field_primary_key">Primary
-                Key</span>
-            </label>
-            <br>
-            <label class="cb-label">
-              <input type="checkbox" name="field-null" class="checkbox field-null"><span data-lang-text="designer.field_allow_nulls">Allow
-                nulls</span>
-            </label>
-            <br>
-            <label class="cb-label">
-              <input type="checkbox" name="field-unique" class="checkbox field-unique"><span data-lang-text="designer.field_unique">Unique</span>
-            </label>
-            <br>
-            <label class="cb-label">
-              <input type="checkbox" name="field-ai" class="checkbox field-ai"><span data-lang-text="designer.field_autoincrement">Auto
-                Increment</span>
-            </label>
-            <br>
-            <label class="cb-label">
-              <input type="checkbox" name="field-fk" class="checkbox field-fk"><span data-lang-text="designer.field_foreign_key">Foreign
-                Key</span>
-            </label>
-            <br>
-            <input type="button" value="Save" class="save-button">
-            <input type="button" value="Cancel" class="cancel-button">
+              </select>
+              <br>
+              <label for="field-size">Size</label>
+              <input type="text" name="field-size">
+              <br>
+              <label for="">Default</label>
+              <input type="text" name="field-default">
+              <br>
+              <label>
+                <input type="checkbox" name="field-pk"><span>Primary
+                  Key</span>
+              </label>
+              <br>
+              <label>
+                <input type="checkbox" name="field-null"><span>Allow
+                  nulls</span>
+              </label>
+              <br>
+              <label>
+                <input type="checkbox" name="field-unique"><span>Unique</span>
+              </label>
+              <br>
+              <label>
+                <input type="checkbox" name="field-ai"><span>Auto
+                  Increment</span>
+              </label>
+              <br>
+              <label>
+                <input type="checkbox" name="field-fk"><span>Foreign
+                  Key</span>
+              </label>
+              <br>
+              <input type="button" value="Save" class="save-button">
+              <input type="button" value="Cancel" class="cancel-button">
           </div>
         </td>
       </tr>
@@ -136,7 +142,7 @@
         <td><i class="fa fa-fw fa-key"></i></td>
         <td>id</td>
         <td>int</td>
-        <td><i class="fa fa-fw fa-edit"></i> </td>
+        <td><i class="fa fa-fw fa-edit"></i></td>
       </tr>
       <tr>
         <td></td>

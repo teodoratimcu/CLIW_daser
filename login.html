@@ -9,14 +9,16 @@
   <link rel="stylesheet" href="./mystyle.css">
   <link rel="icon" type="image/png" href="./teo.png" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+    crossorigin="anonymous">
 </head>
 
 <body>
   <div class="navbar">
     <img src="./database.png" alt="logo" />
-    <a class="active" href="index.html">Home</a>
+    <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
     <div class="dropdown">
-      <button class="dropbtn">File</button>
+      <button class="dropbtn"><i class="fa fa-fw fa-file"></i> File</button>
       <div class="dropdown-content">
         <a href="#">New file</a>
         <a href="#">Save</a>
@@ -25,7 +27,7 @@
       </div>
     </div>
     <div class="dropdown">
-      <button class="dropbtn">Insert</button>
+      <button class="dropbtn"><i class="fa fa-fw fa-plus"></i> Insert</button>
       <div class="dropdown-content">
         <a href="#">Table</a>
         <a href="#">Relation</a>
@@ -33,28 +35,34 @@
       </div>
     </div>
     <div class="dropdown">
-      <button class="dropbtn">Export</button>
+      <button class="dropbtn"><i class="fa fa-fw fa-images"></i> Export</button>
       <div class="dropdown-content">
         <a href="#">SQL file</a>
         <a href="#">PNG image</a>
         <a href="#">SVG file</a>
       </div>
     </div>
-    <a href="import.html">Import</a>
-    <a href="#"> Blog</a>
-    <a href="about.html" class="right">About</a>
-    <a href="contact.html" class="right"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-    <a href="login.html" class="right"><i class="fa fa-fw fa-user"></i> Login</a>
+    <a href="import.html"><i class="fa fa-fw fa-file-import"></i> Import</a>
+    <a href="http://students.info.uaic.ro/~teodora.timcu/"><i class="fa fa-fw fa-link"></i> Blog</a>
+    <div class="navbar-right">
+
+      <a href="login.html"><i class="fa fa-fw fa-user"></i> Login</a>
+      <a href="contact.html"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+      <a href="about.html"><i class="fa fa-fw fa-star"></i> About</a>
+
+    </div>
   </div>
+
+
   <form action="#" id="form">
     <div class="head">Login</div>
     <div class="social">
       <h4>Connect with</h4>
       <ul>
-        <li> 
-        <a href="" class="facebook">
-          <span class="fa fa-facebook"></span>
-        </a>
+        <li>
+          <a href="" class="facebook">
+            <span class="fa fa-facebook"></span>
+          </a>
         </li>
         <li>
           <a href="" class="twitter">
@@ -67,19 +75,19 @@
           </a>
         </li>
       </ul>
-     </div>
+    </div>
 
-     <div class="divider">
-       <span>or</span>
-     </div>
-      
+    <div class="divider">
+      <span>or</span>
+    </div>
+
     <div class="input-field">
       <label for="email">Email</label>
       <input type="email" name="email" required="email" />
-      <label for="password">Password</label> 
-      <input type="password" name="password" required/>
+      <label for="password">Password</label>
+      <input type="password" name="password" required />
       <input type="submit" value="Login" />
       <p class="text-p">Don't have an account? <a href="register.html">Register</a></p>
     </div>
-</form>
+  </form>
 </body>
