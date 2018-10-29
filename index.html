@@ -47,30 +47,37 @@
     <a href="login.html" class="right"><i class="fa fa-fw fa-user"></i> Login</a>
   </div>
 
-
-  <table class="table" style="position: absolute; z-index: 2; opacity: 1; left: 607px; top: 394px;">
+  <table id="mydiv" width="10%">
     <thead>
       <tr>
-        <th><button class="collapsible">Untitled</button>
+        <td colspan="4"><button class="collapsible">Untitled</button>
           <div class="content">
             <form action="/action_page.php">
+              <br>
               Table name:
-              <input type="text" name="firstname" value="untitled">
+              <input type="text" name="firstname" value="">
               <br><br>
-              <input type="button" value="Submit">
+              Table comment:
+              <textarea type="text" name="firstname" value=""></textarea>
+              <br>
+              <input type="button" value="Save">
+              <input type="button" value="Cancel">
             </form>
-        </th>
+        </td>
       </tr>
     </thead>
-    <tfoot>
+
+    <tfoot class="add">
       <tr>
-        <th><button class="collapsible">&#43;Add field</button>
+        <td colspan="4"><button class="collapsible" style="background-color: #9494b8 ; padding:5px"><i class="fa fa-fw fa-plus"></i>
+            Add field</button>
           <div class="content">
 
-            <label for="field-name">Name</label>
-            <input type="text" name="field-name" class="field-name">
+            <label for="text">Name</label>
+            <input type="text" name="text">
             <br>
             <label for="field-type" data-lang-text="designer.field_type">Type</label>
+            <br>
             <select class="field-type" name="field-type">
               <option value="binary">binary</option>
               <option value="blob">blob</option>
@@ -117,40 +124,58 @@
                 Key</span>
             </label>
             <br>
-            <div class="refs" style="display: none;"><label for="field-ref-table">Ref. Table</label>
-              <select class="field-ref-table">
-                <option value="Untitled">Untitled</option>
-                <option value="teo">teo</option>
-              </select>
-              <br>
-              <label for="field-ref-fields">Ref. Field</label>
-              <select class="field-ref-fields">
-              </select>
-              <br></div>
-            <br>
-            <input type="button" data-lang-value="designer.field_save" value="Save" class="btn save-button">
-            <input type="button" data-lang-value="designer.field_save" value="Cancel" class="btn save-button">
+            <input type="button" value="Save" class="save-button">
+            <input type="button" value="Cancel" class="cancel-button">
           </div>
+        </td>
       </tr>
-
     </tfoot>
+
+    <tbody>
+      <tr>
+        <td><i class="fa fa-fw fa-key"></i></td>
+        <td>id</td>
+        <td>int</td>
+        <td><i class="fa fa-fw fa-edit"></i> </td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>nume</td>
+        <td>string</td>
+        <td><i class="fa fa-fw fa-edit"></i></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>prenume</td>
+        <td>string</td>
+        <td><i class="fa fa-fw fa-edit"></i></td>
+      </tr>
+    </tbody>
+
   </table>
 
-  <script>
-    var coll = document.getElementsByClassName("collapsible");
-    var i;
+</body>
 
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        var content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
-      });
-    }
-  </script>
+
+</html>
+
+<script>
+  var coll = document.getElementsByClassName("collapsible");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+</script>
+
+
 
 </html>

@@ -95,35 +95,6 @@ body.home {
     display: block;
 }
 
-table {
-  font-size: 13px;
-  background-color: #eee;
-  min-width: 200px;
-  position: absolute;
-  border-collapse: collapse;
-  border-top: 1px solid #444444;
-  border-left: 1px solid #444444;
-  border-right: 1px solid #444444;
-  border-bottom: 1px solid #444444;
-  border-collapse: separate;
-  border-spacing: 0;
-}
-
-.collapsible {
-  cursor: pointer;
-  padding: 10px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-}
 
 /* FORMS */
 
@@ -306,4 +277,115 @@ form#form {
   .daser-image{
     float: none;
   }
+}
+
+/* import-page */
+
+.build-schema {
+  float:left;
+  margin:20px;
+}
+
+.build-schema input[type="submit"]{
+  background: #f85f64;
+  border: medium none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;;
+  outline: medium none;
+  overflow: hidden;
+  padding: 14px;
+}
+
+.build-schema input[type="submit"]:hover {
+  background: #fe7175;
+}
+
+.build-schema textarea {
+  background-color: lightgray;
+}
+
+.run-sql{
+  float:right;
+  margin:20px;
+}
+
+.run-sql textarea {
+  background-color: whitesmoke;
+}
+
+.run-sql input[type="submit"]{
+  background:#49afcd;
+  border: medium none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  margin-top:10px;
+  outline: medium none;
+  overflow: hidden;
+  padding: 14px;
+}
+
+.run-sql input[type="submit"]:hover {
+  background: lightblue;
+}
+
+
+@media screen and (max-width: 500px) {
+  .run-sql {
+    float: none;
+    display: inline;
+  }
+}
+
+
+/* home-page */
+
+
+.content input[type="button"]{
+  background:#00b386;
+  border: medium none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;;
+  outline: medium none;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.content {
+ background-color: whitesmoke;
+ padding: 0 18px;
+  display: none;
+  overflow: hidden;
+
+}
+.collapsible {
+  background-color: #555;
+  color:white;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: whitesmoke;
+  margin:200px;
+}
+table, td, th {
+  border: 1px solid black;
+} 
+
+tbody {
+  padding: 15px;
+  text-align: left;
+}
+
 }

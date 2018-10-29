@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=1080">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="An online SQL database playground for testing, debugging and sharing SQL snippets." />
   <title>Daser - SQL Database Playground</title>
   <link rel="stylesheet" href="./mystyle.css">
@@ -47,8 +47,18 @@
     <a href="login.html" class="right"><i class="fa fa-fw fa-user"></i> Login</a>
   </div>
 
-  <div class="import-code" id="import-code">
-    <textarea type="subject" id="subject" name="subject" placeholder="#Import code here" style="height:800px ; width:700px"></textarea>
+  <div  style="overflow-x:auto;"class="build-schema" id="build-schema">
+    <textarea rows="30" cols="120" type="subject" id="subject" name="subject" placeholder="#Import code here" ></textarea>
     <br>
-    <input type="submit" value="Build schema" />
+    <input type="submit" value="Build schema"/>
   </div>
+
+  <div style="overflow-x:auto;" class="run-sql" id="run-sql">
+        <textarea rows="30" cols="120" type="subject" id="subject" name="subject" placeholder="#Import code here"></textarea>
+        <br>
+        <input type="submit" value="Run SQL"/>
+      </div>
+<br>
+<br>
+    
+  </body>
