@@ -53,7 +53,7 @@
     </div>
   </div>
 
-  <table id="mydiv" width="10%">
+  <table>
     <thead>
       <tr>
         <td colspan="4"><button class="collapsible">Untitled</button>
@@ -64,78 +64,15 @@
               <input type="text" name="firstname" value="">
               <br><br>
               Table comment:
-              <textarea type="text" name="firstname" value=""></textarea>
+              <textarea name="firstname"></textarea>
               <br>
               <input type="button" value="Save">
               <input type="button" value="Cancel">
             </form>
-        </td>
-      </tr>
-    </thead>
-
-    <tfoot>
-      <tr>
-        <td colspan="4"><button class="collapsible" style="background-color: #9494b8 ; padding:5px"><i class="fa fa-fw fa-plus"></i>
-            Add field</button>
-          <div class="content">
-
-            <label for="text">Name</label>
-            <input type="text" name="text">
-            <br>
-            <label for="field-type"">Type</label>
-            <br>
-            <select class=" field-type" name="field-type">
-              <option value="binary">binary</option>
-              <option value="blob">blob</option>
-              <option value="boolean">boolean</option>
-              <option value="date">date</option>
-              <option value="datetime">datetime</option>
-              <option value="decimal">decimal</option>
-              <option value="float">float</option>
-              <option value="integer">integer</option>
-              <option value="string">string</option>
-              <option value="text">text</option>
-              <option value="time">time</option>
-              <option value="timestamp">timestamp</option>
-              <option value="varchar">varchar</option>
-              </select>
-              <br>
-              <label for="field-size">Size</label>
-              <input type="text" name="field-size">
-              <br>
-              <label for="">Default</label>
-              <input type="text" name="field-default">
-              <br>
-              <label>
-                <input type="checkbox" name="field-pk"><span>Primary
-                  Key</span>
-              </label>
-              <br>
-              <label>
-                <input type="checkbox" name="field-null"><span>Allow
-                  nulls</span>
-              </label>
-              <br>
-              <label>
-                <input type="checkbox" name="field-unique"><span>Unique</span>
-              </label>
-              <br>
-              <label>
-                <input type="checkbox" name="field-ai"><span>Auto
-                  Increment</span>
-              </label>
-              <br>
-              <label>
-                <input type="checkbox" name="field-fk"><span>Foreign
-                  Key</span>
-              </label>
-              <br>
-              <input type="button" value="Save" class="save-button">
-              <input type="button" value="Cancel" class="cancel-button">
           </div>
         </td>
       </tr>
-    </tfoot>
+    </thead>
 
     <tbody>
       <tr>
@@ -158,30 +95,90 @@
       </tr>
     </tbody>
 
+    <tfoot>
+      <tr>
+        <td colspan="4"><button class="collapsible" style="background-color: #9494b8 ; padding:5px"><i class="fa fa-fw fa-plus"></i>
+            Add field</button>
+          <div class="content">
+
+            <label for="text">Name</label>
+            <input type="text" id="text" name="text">
+            <br>
+            <label for="field-type">Type</label>
+            <br>
+            <select id="field-type" name="field-type">
+              <option value="binary">binary</option>
+              <option value="blob">blob</option>
+              <option value="boolean">boolean</option>
+              <option value="date">date</option>
+              <option value="datetime">datetime</option>
+              <option value="decimal">decimal</option>
+              <option value="float">float</option>
+              <option value="integer">integer</option>
+              <option value="string">string</option>
+              <option value="text">text</option>
+              <option value="time">time</option>
+              <option value="timestamp">timestamp</option>
+              <option value="varchar">varchar</option>
+            </select>
+            <br>
+            <label for="field-size">Size</label>
+            <input type="text" id="field-size" name="field-size">
+            <br>
+            <label for="field-default">Default</label>
+            <input type="text" id="field-default" name="field-default">
+            <br>
+            <label>
+              <input type="checkbox" name="field-pk"><span>Primary
+                Key</span>
+            </label>
+            <br>
+            <label>
+              <input type="checkbox" name="field-null"><span>Allow
+                nulls</span>
+            </label>
+            <br>
+            <label>
+              <input type="checkbox" name="field-unique"><span>Unique</span>
+            </label>
+            <br>
+            <label>
+              <input type="checkbox" name="field-ai"><span>Auto
+                Increment</span>
+            </label>
+            <br>
+            <label>
+              <input type="checkbox" name="field-fk"><span>Foreign
+                Key</span>
+            </label>
+            <br>
+            <input type="button" value="Save" class="save-button">
+            <input type="button" value="Cancel" class="cancel-button">
+          </div>
+        </td>
+      </tr>
+    </tfoot>
+
   </table>
 
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+  </script>
+
 </body>
-
-
-</html>
-
-<script>
-  var coll = document.getElementsByClassName("collapsible");
-  var i;
-
-  for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function () {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
-    });
-  }
-</script>
-
 
 
 </html>
